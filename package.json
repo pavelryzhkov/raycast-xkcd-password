@@ -1,9 +1,10 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "xkcd-password",
-  "title": "XKCD Password",
+  "title": "XKCD Password Generator",
   "description": "Generate memorable passwords in XKCD style",
-  "author": "pavel_ryzhkov",
+  "icon": "extension-icon.png",
+  "author": "pavelryzhkov",
   "categories": [
     "Security",
     "Productivity"
@@ -15,14 +16,14 @@
       "title": "Copy Random XKCD Password",
       "description": "Generate and copy a random XKCD-style password",
       "mode": "no-view",
-      "icon": "📋"
+      "icon": "command-icon.png"
     },
     {
       "name": "show-xkcd-password-list",
       "title": "Show XKCD Password List",
       "description": "Show a list of generated XKCD-style passwords",
       "mode": "view",
-      "icon": "📝"
+      "icon": "command-icon.png"
     }
   ],
   "dependencies": {
@@ -42,5 +43,30 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
-  }
+  },
+  "version": "1.0.0",
+  "keywords": [
+    "password",
+    "generator",
+    "security",
+    "xkcd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavelryzhkov/raycast-xkcd-password"
+  },
+  "screenshots": [
+    {
+      "path": "1.png",
+      "title": "Quick Copy Password"
+    },
+    {
+      "path": "2.png",
+      "title": "Password List View"
+    },
+    {
+      "path": "3.png",
+      "title": "Password Details"
+    }
+  ]
 }

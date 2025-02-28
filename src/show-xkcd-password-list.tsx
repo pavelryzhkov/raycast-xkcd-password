@@ -1,15 +1,15 @@
 import { List, ActionPanel, Action, showToast, Toast, Clipboard } from "@raycast/api";
-import wordList from './wordlist.json';
+import wordList from "./wordlist.json";
 
 function capitalizeWord(word: string): string {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
 function generateTwoDigits(): string {
-  return String(Math.floor(Math.random() * 100)).padStart(2, '0');
+  return String(Math.floor(Math.random() * 100)).padStart(2, "0");
 }
 
-function generateXkcdPassword(wordCount: number = 3, separator: string = '-'): string {
+function generateXkcdPassword(wordCount: number = 3, separator: string = "-"): string {
   const words = [];
   for (let i = 0; i < wordCount; i++) {
     const randomIndex = Math.floor(Math.random() * wordList.length);
@@ -41,7 +41,7 @@ export default function Command() {
                   await Clipboard.copy(password);
                   await showToast({
                     style: Toast.Style.Success,
-                    title: "Password Copied"
+                    title: "Password Copied",
                   });
                 }}
               />
@@ -51,4 +51,4 @@ export default function Command() {
       ))}
     </List>
   );
-} 
+}
