@@ -1,0 +1,46 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "xkcd-password",
+  "title": "XKCD Password",
+  "description": "Generate memorable passwords in XKCD style",
+  "author": "pavel_ryzhkov",
+  "categories": [
+    "Security",
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "copy-random-xkcd-password",
+      "title": "Copy Random XKCD Password",
+      "description": "Generate and copy a random XKCD-style password",
+      "mode": "no-view",
+      "icon": "📋"
+    },
+    {
+      "name": "show-xkcd-password-list",
+      "title": "Show XKCD Password List",
+      "description": "Show a list of generated XKCD-style passwords",
+      "mode": "view",
+      "icon": "📝"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.92.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
